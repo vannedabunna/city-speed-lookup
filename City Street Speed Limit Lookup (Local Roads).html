@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<!-- saved from url=(0056)file:///C:/Users/vbunna/Downloads/city_speed_lookup.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>City Street Speed Limit Lookup (Local Roads)</title>
+  <link rel="stylesheet" href="./City Street Speed Limit Lookup (Local Roads)_files/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+  <style>
+    html, body {height: 100%; margin:0;}
+    #map {height: 100%;}
+    .panel { position:absolute; top:10px; left:10px; z-index:1000; background:#fff; padding:12px 14px; border-radius:8px; box-shadow:0 2px 10px rgba(0,0,0,.2); width:330px; }
+    .panel h2 { margin:0 0 8px; font:600 16px system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif; }
+    .panel label { display:block; margin:6px 0 2px; font-size:12px; }
+    .panel input { width:100%; padding:6px 8px; border:1px solid #bbb; border-radius:4px; font-size:14px; }
+    .panel button { width:100%; margin-top:8px; padding:8px 10px; background:#16a34a; color:#fff; border:0; border-radius:4px; cursor:pointer; font-size:14px; }
+    .panel .small { font-size:11px; color:#444; margin-top:8px; }
+    .status { font-size:12px; margin-top:6px; min-height:18px; }
+    .results { max-height: 180px; overflow:auto; margin-top:6px; font-size:12px; border-top:1px solid #eee; padding-top:6px; }
+    .result-item { padding:4px 0; border-bottom:1px dashed #eee; }
+  </style>
+</head>
+<body class="">
+<div id="map" class="leaflet-container leaflet-touch leaflet-fade-anim leaflet-grab leaflet-touch-drag leaflet-touch-zoom" tabindex="0" style="position: relative; outline-style: none;"><div class="leaflet-pane leaflet-map-pane" style="transform: translate3d(-865px, -239px, 0px);"><div class="leaflet-pane leaflet-tile-pane"><div class="leaflet-layer " style="z-index: 1; opacity: 1;"><div class="leaflet-tile-container leaflet-zoom-animated" style="z-index: 17; transform: translate3d(-2250px, -1365px, 0px) scale(4);"></div><div class="leaflet-tile-container leaflet-zoom-animated" style="z-index: 19; transform: translate3d(0px, 0px, 0px) scale(1);"><img alt="" src="./City Street Speed Limit Lookup (Local Roads)_files/183973.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(818px, 323px, 0px); opacity: 1;"><img alt="" src="./City Street Speed Limit Lookup (Local Roads)_files/183972.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(818px, 67px, 0px); opacity: 1;"><img alt="" src="./City Street Speed Limit Lookup (Local Roads)_files/183973(1).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(562px, 323px, 0px); opacity: 1;"><img alt="" src="./City Street Speed Limit Lookup (Local Roads)_files/183973(2).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1074px, 323px, 0px); opacity: 1;"><img alt="" src="./City Street Speed Limit Lookup (Local Roads)_files/183974.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(818px, 579px, 0px); opacity: 1;"><img alt="" src="./City Street Speed Limit Lookup (Local Roads)_files/183972(1).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(562px, 67px, 0px); opacity: 1;"><img alt="" src="./City Street Speed Limit Lookup (Local Roads)_files/183972(2).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1074px, 67px, 0px); opacity: 1;"><img alt="" src="./City Street Speed Limit Lookup (Local Roads)_files/183974(1).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(562px, 579px, 0px); opacity: 1;"><img alt="" src="./City Street Speed Limit Lookup (Local Roads)_files/183974(2).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1074px, 579px, 0px); opacity: 1;"><img alt="" src="./City Street Speed Limit Lookup (Local Roads)_files/183971.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(818px, -189px, 0px); opacity: 1;"><img alt="" src="./City Street Speed Limit Lookup (Local Roads)_files/183973(3).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(306px, 323px, 0px); opacity: 1;"><img alt="" src="./City Street Speed Limit Lookup (Local Roads)_files/183973(4).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1330px, 323px, 0px); opacity: 1;"><img alt="" src="./City Street Speed Limit Lookup (Local Roads)_files/183975.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(818px, 835px, 0px); opacity: 1;"><img alt="" src="./City Street Speed Limit Lookup (Local Roads)_files/183971(1).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(562px, -189px, 0px); opacity: 1;"><img alt="" src="./City Street Speed Limit Lookup (Local Roads)_files/183971(2).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1074px, -189px, 0px); opacity: 1;"><img alt="" src="./City Street Speed Limit Lookup (Local Roads)_files/183972(3).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(306px, 67px, 0px); opacity: 1;"><img alt="" src="./City Street Speed Limit Lookup (Local Roads)_files/183972(4).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1330px, 67px, 0px); opacity: 1;"><img alt="" src="./City Street Speed Limit Lookup (Local Roads)_files/183974(3).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(306px, 579px, 0px); opacity: 1;"><img alt="" src="./City Street Speed Limit Lookup (Local Roads)_files/183974(4).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1330px, 579px, 0px); opacity: 1;"><img alt="" src="./City Street Speed Limit Lookup (Local Roads)_files/183975(1).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(562px, 835px, 0px); opacity: 1;"><img alt="" src="./City Street Speed Limit Lookup (Local Roads)_files/183975(2).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1074px, 835px, 0px); opacity: 1;"><img alt="" src="./City Street Speed Limit Lookup (Local Roads)_files/183971(3).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(306px, -189px, 0px); opacity: 1;"><img alt="" src="./City Street Speed Limit Lookup (Local Roads)_files/183971(4).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1330px, -189px, 0px); opacity: 1;"><img alt="" src="./City Street Speed Limit Lookup (Local Roads)_files/183975(3).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(306px, 835px, 0px); opacity: 1;"><img alt="" src="./City Street Speed Limit Lookup (Local Roads)_files/183975(4).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1330px, 835px, 0px); opacity: 1;"><img alt="" src="./City Street Speed Limit Lookup (Local Roads)_files/183973(5).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(50px, 323px, 0px); opacity: 1;"><img alt="" src="./City Street Speed Limit Lookup (Local Roads)_files/183973(6).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1586px, 323px, 0px); opacity: 1;"><img alt="" src="./City Street Speed Limit Lookup (Local Roads)_files/183972(5).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(50px, 67px, 0px); opacity: 1;"><img alt="" src="./City Street Speed Limit Lookup (Local Roads)_files/183972(6).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1586px, 67px, 0px); opacity: 1;"><img alt="" src="./City Street Speed Limit Lookup (Local Roads)_files/183974(5).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(50px, 579px, 0px); opacity: 1;"><img alt="" src="./City Street Speed Limit Lookup (Local Roads)_files/183974(6).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1586px, 579px, 0px); opacity: 1;"><img alt="" src="./City Street Speed Limit Lookup (Local Roads)_files/183971(5).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(50px, -189px, 0px); opacity: 1;"><img alt="" src="./City Street Speed Limit Lookup (Local Roads)_files/183971(6).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1586px, -189px, 0px); opacity: 1;"><img alt="" src="./City Street Speed Limit Lookup (Local Roads)_files/183975(5).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(50px, 835px, 0px); opacity: 1;"><img alt="" src="./City Street Speed Limit Lookup (Local Roads)_files/183975(6).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1586px, 835px, 0px); opacity: 1;"><img alt="" src="./City Street Speed Limit Lookup (Local Roads)_files/183973(7).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-206px, 323px, 0px); opacity: 1;"><img alt="" src="./City Street Speed Limit Lookup (Local Roads)_files/183973(8).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1842px, 323px, 0px); opacity: 1;"><img alt="" src="./City Street Speed Limit Lookup (Local Roads)_files/183972(7).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-206px, 67px, 0px); opacity: 1;"><img alt="" src="./City Street Speed Limit Lookup (Local Roads)_files/183972(8).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1842px, 67px, 0px); opacity: 1;"><img alt="" src="./City Street Speed Limit Lookup (Local Roads)_files/183974(7).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-206px, 579px, 0px); opacity: 1;"><img alt="" src="./City Street Speed Limit Lookup (Local Roads)_files/183974(8).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1842px, 579px, 0px); opacity: 1;"><img alt="" src="./City Street Speed Limit Lookup (Local Roads)_files/183971(7).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-206px, -189px, 0px); opacity: 1;"><img alt="" src="./City Street Speed Limit Lookup (Local Roads)_files/183971(8).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1842px, -189px, 0px); opacity: 1;"><img alt="" src="./City Street Speed Limit Lookup (Local Roads)_files/183975(7).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-206px, 835px, 0px); opacity: 1;"><img alt="" src="./City Street Speed Limit Lookup (Local Roads)_files/183975(8).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1842px, 835px, 0px); opacity: 1;"><img alt="" src="./City Street Speed Limit Lookup (Local Roads)_files/183976.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1074px, 1091px, 0px); opacity: 1;"><img alt="" src="./City Street Speed Limit Lookup (Local Roads)_files/183976(1).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(818px, 1091px, 0px); opacity: 1;"><img alt="" src="./City Street Speed Limit Lookup (Local Roads)_files/183976(2).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1330px, 1091px, 0px); opacity: 1;"><img alt="" src="./City Street Speed Limit Lookup (Local Roads)_files/183976(3).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(562px, 1091px, 0px); opacity: 1;"><img alt="" src="./City Street Speed Limit Lookup (Local Roads)_files/183976(4).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1586px, 1091px, 0px); opacity: 1;"><img alt="" src="./City Street Speed Limit Lookup (Local Roads)_files/183976(5).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(306px, 1091px, 0px); opacity: 1;"><img alt="" src="./City Street Speed Limit Lookup (Local Roads)_files/183976(6).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1842px, 1091px, 0px); opacity: 1;"><img alt="" src="./City Street Speed Limit Lookup (Local Roads)_files/183974(9).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(2098px, 579px, 0px); opacity: 1;"><img alt="" src="./City Street Speed Limit Lookup (Local Roads)_files/183973(9).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(2098px, 323px, 0px); opacity: 1;"><img alt="" src="./City Street Speed Limit Lookup (Local Roads)_files/183975(9).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(2098px, 835px, 0px); opacity: 1;"><img alt="" src="./City Street Speed Limit Lookup (Local Roads)_files/183972(9).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(2098px, 67px, 0px); opacity: 1;"><img alt="" src="./City Street Speed Limit Lookup (Local Roads)_files/183976(7).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(50px, 1091px, 0px); opacity: 1;"><img alt="" src="./City Street Speed Limit Lookup (Local Roads)_files/183976(8).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(2098px, 1091px, 0px); opacity: 1;"></div></div></div><div class="leaflet-pane leaflet-overlay-pane"><svg pointer-events="none" class="leaflet-zoom-animated" width="934" height="1097" viewBox="787 148 934 1097" style="transform: translate3d(787px, 148px, 0px);"><g><path class="leaflet-interactive" stroke="#e11d48" stroke-opacity="0.9" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none" d="M1466 148L1147 606L1049 749L953 896L939 937"></path></g></svg></div><div class="leaflet-pane leaflet-shadow-pane"><img src="./City Street Speed Limit Lookup (Local Roads)_files/marker-shadow.png" class="leaflet-marker-shadow leaflet-zoom-animated" alt="" style="margin-left: -12px; margin-top: -41px; width: 41px; height: 41px; transform: translate3d(885px, 948px, 0px);"></div><div class="leaflet-pane leaflet-marker-pane"><img src="./City Street Speed Limit Lookup (Local Roads)_files/marker-icon.png" class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" alt="Marker" tabindex="0" role="button" style="margin-left: -12px; margin-top: -41px; width: 25px; height: 41px; transform: translate3d(885px, 948px, 0px); z-index: 948;"></div><div class="leaflet-pane leaflet-tooltip-pane"></div><div class="leaflet-pane leaflet-popup-pane"></div><div class="leaflet-proxy leaflet-zoom-animated" style="transform: translate3d(2.16283e+07px, 4.70975e+07px, 0px) scale(262144);"></div></div><div class="leaflet-control-container"><div class="leaflet-top leaflet-left"><div class="leaflet-control-zoom leaflet-bar leaflet-control"><a class="leaflet-control-zoom-in leaflet-disabled" href="file:///C:/Users/vbunna/Downloads/city_speed_lookup.html#" title="Zoom in" role="button" aria-label="Zoom in" aria-disabled="true"><span aria-hidden="true">+</span></a><a class="leaflet-control-zoom-out" href="file:///C:/Users/vbunna/Downloads/city_speed_lookup.html#" title="Zoom out" role="button" aria-label="Zoom out" aria-disabled="false"><span aria-hidden="true">−</span></a></div></div><div class="leaflet-top leaflet-right"></div><div class="leaflet-bottom leaflet-left"></div><div class="leaflet-bottom leaflet-right"><div class="leaflet-control-attribution leaflet-control"><a href="https://leafletjs.com/" title="A JavaScript library for interactive maps"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="12" height="8" viewBox="0 0 12 8" class="leaflet-attribution-flag"><path fill="#4C7BE1" d="M0 0h12v4H0z"></path><path fill="#FFD500" d="M0 4h12v3H0z"></path><path fill="#E0BC00" d="M0 7h12v1H0z"></path></svg> Leaflet</a> <span aria-hidden="true">|</span> © OpenStreetMap contributors</div></div></div></div>
+<div class="panel">
+  <h2>City Street Speed Limit Lookup</h2>
+  <label for="lat">Latitude</label>
+  <input id="lat" placeholder="e.g., 47.6205">
+  <label for="lon">Longitude</label>
+  <input id="lon" placeholder="e.g., -122.3493">
+  <label for="rad">Search radius (meters)</label>
+  <input id="rad" value="300">
+  <button id="go">Find nearest local-road speed</button>
+  <div class="status" id="status">Nearest local road: <b>1st Street</b> · <b>25 mph</b> · 11 m away</div>
+  <div class="results" id="results"><div class="result-item"><b>1st Street</b><br>Speed limit: <b>25 mph</b><br><span style="color:#555">11 m away</span></div><div class="result-item"><b>Railroad Street</b><br>Speed limit: <b>25 mph</b><br><span style="color:#555">99 m away</span></div><div class="result-item"><b>Initial Avenue</b><br>Speed limit: <b>25 mph</b><br><span style="color:#555">153 m away</span></div><div class="result-item"><b>Monroe Avenue</b><br>Speed limit: <b>25 mph</b><br><span style="color:#555">174 m away</span></div><div class="result-item"><b>Roosevelt Avenue</b><br>Speed limit: <b>35 mph</b><br><span style="color:#555">194 m away</span></div></div>
+  <div class="small">Source: OpenStreetMap via Overpass API. Coverage depends on local mapping; results may be incomplete or outdated. Local city/county datasets can be added if available.</div>
+</div>
+
+<script src="./City Street Speed Limit Lookup (Local Roads)_files/leaflet.js.download" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script>
+const map = L.map('map').setView([47.6062, -122.3321], 12);
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  maxZoom: 19,
+  attribution: '&copy; OpenStreetMap contributors'
+}).addTo(map);
+let pointMarker, nearestLine;
+
+const overpassEndpoints = [
+  'https://overpass-api.de/api/interpreter',
+  'https://overpass.openstreetmap.ru/api/interpreter',
+  'https://overpass.kumi.systems/api/interpreter'
+];
+
+function buildQuery(lat, lon, radius) {
+  // Query ways (roads) with maxspeed within radius, return geometry and key tags
+  return `[
+    out:json][timeout:25];
+    way(around:${radius},${lat},${lon})["highway"]["maxspeed"]; 
+    out geom tags;`;
+}
+
+function metersTo(mi) { return (mi * 0.000621371).toFixed(2); }
+
+async function fetchOverpass(query) {
+  for (const ep of overpassEndpoints) {
+    try {
+      const r = await fetch(ep, { method: 'POST', body: query, headers: {'Content-Type':'application/x-www-form-urlencoded'} });
+      if (!r.ok) throw new Error('HTTP '+r.status);
+      const data = await r.json();
+      return data;
+    } catch (e) {
+      console.warn('Overpass endpoint failed, trying next', ep, e);
+    }
+  }
+  throw new Error('All Overpass endpoints failed. Try again later.');
+}
+
+function haversine(lat1, lon1, lat2, lon2){
+  const R=6371000; const toRad = d=>d*Math.PI/180;
+  const dLat = toRad(lat2-lat1), dLon = toRad(lon2-lon1);
+  const a = Math.sin(dLat/2)**2 + Math.cos(toRad(lat1))*Math.cos(toRad(lat2))*Math.sin(dLon/2)**2;
+  const c = 2*Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+  return R*c;
+}
+
+function lineDistanceToPoint(coords, lat, lon){
+  // Approximate by checking vertices and mid-segment projections (simple approach)
+  let best = Infinity;
+  for (let i=0;i<coords.length-1;i++){
+    const [lon1, lat1] = coords[i];
+    const [lon2, lat2] = coords[i+1];
+    // sample mid-point as quick approximation
+    const midLat=(lat1+lat2)/2, midLon=(lon1+lon2)/2;
+    best = Math.min(best,
+      haversine(lat,lon,lat1,lon1),
+      haversine(lat,lon,lat2,lon2),
+      haversine(lat,lon,midLat,midLon)
+    );
+  }
+  return best;
+}
+
+function drawWay(way){
+  const coords = way.geometry.map(n=>[n.lat, n.lon]);
+  const poly = L.polyline(coords, {color:'#e11d48', weight:4, opacity:0.9});
+  poly.addTo(map);
+  return poly;
+}
+
+async function run(){
+  const lat = parseFloat(document.getElementById('lat').value);
+  const lon = parseFloat(document.getElementById('lon').value);
+  const radius = parseFloat(document.getElementById('rad').value)||300;
+  const status = document.getElementById('status');
+  const resultsEl = document.getElementById('results');
+  resultsEl.innerHTML = '';
+  if (!Number.isFinite(lat) || !Number.isFinite(lon)){
+    status.textContent = 'Please enter valid decimal degree values.'; return;
+  }
+  status.textContent = 'Querying OpenStreetMap (local roads with maxspeed)…';
+  if (pointMarker) { map.removeLayer(pointMarker); }
+  if (nearestLine) { map.removeLayer(nearestLine); }
+  pointMarker = L.marker([lat,lon]).addTo(map);
+  map.setView([lat,lon], 15);
+
+  const query = 'data=' + encodeURIComponent(buildQuery(lat, lon, radius));
+  try {
+    const data = await fetchOverpass(query);
+    const ways = (data.elements||[]).filter(el => el.type==='way');
+    if (ways.length === 0){
+      status.textContent = `No OSM roads with a mapped speed limit within ${radius} m.`;
+      return;
+    }
+    // Compute nearest by simple distance to polyline vertices/midpoints
+    const withDist = ways.map(w=>{
+      const coords = w.geometry.map(g=>[g.lon, g.lat]);
+      const d = lineDistanceToPoint(coords, lat, lon);
+      return {way:w, dist:d};
+    }).sort((a,b)=>a.dist-b.dist);
+
+    const nearest = withDist[0];
+    const w = nearest.way;
+    const speed = w.tags.maxspeed || 'N/A';
+    const name = w.tags.name || '(unnamed road)';
+
+    nearestLine = drawWay(w);
+    status.innerHTML = `Nearest local road: <b>${name}</b> · <b>${speed}</b> · ${nearest.dist.toFixed(0)} m away`;
+
+    // List a few nearby roads
+    const top = withDist.slice(0,5);
+    resultsEl.innerHTML = top.map(({way,dist})=>{
+      const speed = way.tags.maxspeed || 'N/A';
+      const name = way.tags.name || '(unnamed road)';
+      return `<div class='result-item'><b>${name}</b><br/>Speed limit: <b>${speed}</b><br/><span style='color:#555'>${dist.toFixed(0)} m away</span></div>`
+    }).join('');
+
+  } catch (e) {
+    console.error(e);
+    status.textContent = 'Overpass query failed: ' + e.message;
+  }
+}
+
+document.getElementById('go').addEventListener('click', run);
+['lat','lon','rad'].forEach(id=>{
+  document.getElementById(id).addEventListener('keydown', e=>{ if(e.key==='Enter') run(); });
+});
+</script>
+
+
+</body></html>
